@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#241b3d"><title>ميمي — حكاية صغيرة</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&display=swap');
+:root{--ink:#fff6e9;--muted:#c8bad9;--bg:#171326;--panel:#29203f;--panel2:#35264c;--pink:#ff9db7;--gold:#ffd78a;--mint:#a8f0d0;--line:#5b466e;--shadow:#100d1c}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(ellipse at top,#352448 0,#171326 62%);color:var(--ink);font-family:Changa,system-ui,sans-serif}button{font:inherit;cursor:pointer;border:0;color:inherit;touch-action:manipulation}button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}.hidden{display:none!important}.wrap{max-width:1180px;margin:auto;padding:16px}.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.brand{display:flex;align-items:center;gap:12px}.logo{width:50px;height:50px;display:grid;place-items:center;background:#f9c982;color:#33213f;border:4px solid #fff0c6;box-shadow:4px 4px 0 #8b5878;font-size:25px;font-weight:800;transform:rotate(-3deg);image-rendering:pixelated}.brand h1{font-size:23px;line-height:1.1;margin:0}.brand small{color:var(--muted);font-size:12px}.top-actions{display:flex;gap:8px}.tiny{background:#38294d;border:2px solid #634a75;border-radius:12px;padding:8px 11px}.screen{animation:appear .28s ease}@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}.panel{background:linear-gradient(150deg,#302442,#241c36);border:2px solid var(--line);border-radius:18px;box-shadow:0 7px 0 var(--shadow);overflow:hidden}.hero{min-height:calc(100dvh - 38px);display:grid;place-items:center;padding:18px}.hero-card{width:min(100%,850px);text-align:center;padding:clamp(20px,5vw,48px);position:relative;background:linear-gradient(160deg,#392747,#201a35);border:3px solid #6e527f;border-radius:22px;box-shadow:0 10px 0 #0e0b17}.hero-art{height:210px;position:relative;margin:4px auto 18px;max-width:470px;background:linear-gradient(#342a55 0 66%,#6c5270 66%);border:4px solid #8c6b8c;box-shadow:inset 0 -14px #44334f;overflow:hidden;image-rendering:pixelated}.moon{position:absolute;top:20px;left:40px;width:44px;height:44px;background:#ffe5a7;box-shadow:0 0 0 8px #ffe5a722}.star{position:absolute;color:#fff0bf;font-size:18px}.window{position:absolute;right:35px;top:23px;width:82px;height:94px;background:#282340;border:6px solid #c98f9e;box-shadow:inset 0 0 0 3px #f6c3b7}.window:before,.window:after{content:"";position:absolute;background:#c98f9e}.window:before{width:5px;height:100%;left:50%}.window:after{height:5px;width:100%;top:50%}.bed{position:absolute;bottom:16px;right:28px;width:180px;height:45px;background:#d789a5;border:6px solid #f5c2cf;box-shadow:0 10px #3b294a}.bed:before{content:"";position:absolute;right:8px;top:-22px;width:48px;height:28px;background:#ffe4d2;border:4px solid #f5c2cf}.rug{position:absolute;bottom:8px;left:48px;width:115px;height:17px;background:#d4a7d2;border:4px solid #f1c7e6}.mimi-sprite{position:absolute;bottom:20px;left:105px;width:60px;height:88px;image-rendering:pixelated;filter:drop-shadow(5px 5px 0 #24192b)}.mimi-sprite .hair{position:absolute;top:0;left:8px;width:46px;height:30px;background:#6d3c45;box-shadow:-7px 8px #6d3c45,7px 7px #6d3c45,0 7px #6d3c45}.mimi-sprite .face{position:absolute;top:12px;left:13px;width:37px;height:32px;background:#ffc6a7;box-shadow:0 0 0 3px #e99891}.mimi-sprite .eye{position:absolute;top:24px;left:23px;width:4px;height:5px;background:#352344;box-shadow:15px 0 #352344}.mimi-sprite .body{position:absolute;top:45px;left:8px;width:48px;height:34px;background:#ff9db7;box-shadow:0 5px #a75c88}.mimi-sprite .leg{position:absolute;top:76px;left:13px;width:15px;height:12px;background:#ffc6a7;box-shadow:25px 0 #ffc6a7}.hero h2{font-size:clamp(28px,5vw,46px);margin:8px 0;color:#ffe4a8;text-shadow:3px 3px #805374}.hero p{max-width:560px;margin:0 auto 18px;color:#e3d6ec;line-height:1.9}.btn{padding:12px 17px;border-radius:12px;background:#ffb1c5;color:#3b203f;font-weight:800;box-shadow:0 4px 0 #9a557d;transition:transform .12s,filter .12s}.btn:active{transform:translateY(3px);box-shadow:0 1px 0 #9a557d}.btn.secondary{background:#59436c;color:#fff4e9;box-shadow:0 4px 0 #2a1e39;border:1px solid #8a6d98}.btn.gold{background:#ffdc91;color:#402d3d;box-shadow:0 4px 0 #b47c55}.btn.mint{background:#b5f0d4;color:#253c3b;box-shadow:0 4px 0 #548d7a}.menu-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:20px 0}.credits{font-size:12px;color:#b9a8c9;margin-top:18px}.gamegrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(275px,.8fr);gap:14px}.scene-panel{padding:12px}.scene-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:3px 4px 10px}.scene-head h2{margin:0;font-size:20px}.pill{background:#473455;border:1px solid #745581;border-radius:99px;padding:4px 10px;font-size:12px;color:#fbe4d9;white-space:nowrap}.world{position:relative;overflow:hidden;border:3px solid #80637f;background:#e4aab3;aspect-ratio:16/9;min-height:205px;image-rendering:pixelated}.world canvas{width:100%;height:100%;display:block;image-rendering:pixelated}.scene-caption{position:absolute;bottom:9px;right:9px;background:#21172ddf;border:1px solid #80637f;border-radius:9px;padding:5px 9px;font-size:12px}.bubble{margin-top:12px;background:#3a2a4c;border:2px solid #775784;border-radius:14px;padding:12px 14px;line-height:1.75;min-height:75px}.bubble strong{color:#ffd6a0}.bubble p{margin:3px 0 0}.stats{padding:15px}.stats h3,.actions h3,.journal h3{margin:0 0 12px;font-size:17px}.stat{margin:12px 0}.statline{display:flex;justify-content:space-between;font-size:12px;color:#e8d9ed;margin-bottom:5px}.bar{height:12px;background:#181325;border:2px solid #5a4669;padding:1px}.fill{height:100%;width:50%;background:var(--pink);transition:width .35s}.fill.hunger{background:#ffc76e}.fill.clean{background:#9ce3f0}.fill.energy{background:#b6a6ff}.fill.trust{background:#a8efca}.coinline{display:flex;justify-content:space-between;gap:8px;background:#211a32;border-radius:12px;padding:9px;margin-top:14px;font-size:13px}.actions{padding:15px;margin-top:14px}.action-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.act{min-height:78px;background:#3a2b4d;border:2px solid #6d517c;border-radius:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:13px;transition:transform .12s,background .12s}.act:active{transform:scale(.96);background:#543c62}.act .emoji{font-size:24px;line-height:1.2}.act:disabled{opacity:.35;filter:grayscale(1);cursor:not-allowed}.bottomrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.journal,.goals{padding:14px}.journal-entry{background:#211a32;border-right:3px solid #f3b5c6;border-radius:8px;padding:8px 10px;margin:7px 0;font-size:12px;color:#e8dce9;line-height:1.65}.goals ul{padding-right:20px;margin:5px 0;color:#d9cbe4;font-size:13px;line-height:2}.footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}.footer small{color:#a998ba}.modal-back{position:fixed;inset:0;background:#100b1bd9;z-index:10;display:grid;place-items:center;padding:16px}.modal{width:min(100%,540px);max-height:90dvh;overflow:auto;padding:20px;background:#2c2140;border:3px solid #80608a;border-radius:18px;box-shadow:0 10px 0 #0d0915}.modal h2{margin:0 0 8px;color:#ffdf9b}.modal p{line-height:1.9;color:#e4d7e9}.choices{display:grid;gap:9px;margin-top:14px}.choice{background:#453253;border:2px solid #74527f;border-radius:12px;padding:12px;text-align:right;line-height:1.6}.choice:hover{background:#594064}.choice small{display:block;color:#cbb9d7}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#ffe3a2;color:#39243d;padding:10px 17px;border-radius:12px;font-weight:800;z-index:30;box-shadow:0 4px 0 #a86f58;max-width:90%;text-align:center}.memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.memory-card{aspect-ratio:1;background:#4c385e;border:2px solid #9573a0;border-radius:12px;font-size:29px}.memory-card.revealed{background:#ffdf9b;color:#39243d}.memory-card.matched{background:#a8efca;color:#263d39}.setting-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #584366}.setting-row label{color:#eee0f1}.ending-art{font-size:52px;margin:12px}.muted{color:var(--muted)}@media(max-width:780px){.wrap{padding:10px}.gamegrid{grid-template-columns:1fr}.stats{order:2}.bottomrow{grid-template-columns:1fr}.world{aspect-ratio:4/3;min-height:225px}.scene-head h2{font-size:18px}.brand h1{font-size:20px}.top{align-items:flex-start}.action-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.act{min-height:72px}.footer{justify-content:center}.footer .btn{flex:1}.hero{padding:10px}.hero-card{padding:20px 14px}.hero-art{height:185px}}@media(min-width:781px){.stats{grid-column:2;grid-row:1}.leftcol{grid-column:1;grid-row:1}.action-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div id="app">
+<section id="titleScreen" class="hero screen">
+<div class="hero-card panel">
+<div class="brand" style="justify-content:center"><div class="logo">م</div><div style="text-align:right"><h1>مِيمي</h1><small>حكاية صغيرة • عالم كبير</small></div></div>
+<div class="hero-art" aria-label="غرفة ميمي بكسل آرت"><span class="moon"></span><span class="star" style="top:35px;left:130px">✦</span><span class="star" style="top:75px;left:65px">✧</span><span class="star" style="top:20px;right:150px">✦</span><div class="window"></div><div class="bed"></div><div class="rug"></div><div class="mimi-sprite"><div class="hair"></div><div class="face"></div><div class="eye"></div><div class="body"></div><div class="leg"></div></div></div>
+<h2>كل يوم حكاية جديدة</h2>
+<p>اعتنِ بميمي، اكتشف ما يسعدها، واصنع معها ذكريات صغيرة تكبر يومًا بعد يوم. هي ليست مجرد طفلة تحتاج إلى الرعاية… إنها شخصية لها مشاعرها وأحلامها وحكايتها الخاصة.</p>
+<div class="menu-buttons"><button class="btn gold" id="startBtn">✦ ابدأ الحكاية</button><button class="btn secondary hidden" id="continueBtn">↻ متابعة اللعب</button><button class="btn secondary" id="howBtn">كيف ألعب؟</button><button class="btn secondary" id="settingsBtn">⚙ الإعدادات</button></div>
+<div class="credits">لعبة مستقلة من تطوير Sam Alzubair • تجربة تجريبية قابلة للعب</div>
+</div></section>
+<section id="gameScreen" class="screen hidden">
+<div class="wrap">
+<header class="top"><div class="brand"><div class="logo">م</div><div><h1>مِيمي</h1><small>حكاية صغيرة • عالم كبير</small></div></div><div class="top-actions"><span class="pill" id="dayPill">اليوم ١</span><button class="tiny" id="journalBtn" title="الذكريات">📖</button><button class="tiny" id="pauseBtn" title="الإعدادات">⚙</button></div></header>
+<div class="gamegrid">
+<div class="leftcol">
+<div class="panel scene-panel"><div class="scene-head"><h2 id="sceneTitle">غرفة ميمي</h2><span class="pill" id="timePill">☀ صباح الخير</span></div><div class="world"><canvas id="world" width="480" height="270" aria-label="مشهد بكسل آرت لغرفة ميمي"></canvas><div class="scene-caption" id="sceneCaption">البيت الدافئ</div></div><div class="bubble" aria-live="polite"><strong id="speaker">ميمي</strong><p id="dialogue">صباح الخير! هل سنقضي يومًا جميلًا معًا؟</p></div></div>
+<div class="panel actions"><h3>ماذا سنفعل معًا؟</h3><div class="action-grid">
+<button class="act" data-action="feed"><span class="emoji">🥣</span>إعداد وجبة</button><button class="act" data-action="play"><span class="emoji">🧸</span>اللعب معًا</button><button class="act" data-action="bath"><span class="emoji">🫧</span>وقت النظافة</button><button class="act" data-action="talk"><span class="emoji">💬</span>نتحدث</button><button class="act" data-action="story"><span class="emoji">📚</span>حكاية وتعلّم</button><button class="act" data-action="nap"><span class="emoji">🌙</span>قيلولة</button><button class="act" data-action="explore"><span class="emoji">🌼</span>استكشاف</button><button class="act" data-action="decorate"><span class="emoji">🎨</span>تزيين الغرفة</button><button class="act" data-action="photo"><span class="emoji">📷</span>صورة للذكرى</button>
+</div></div>
+</div>
+<aside class="panel stats"><h3>حال ميمي اليوم</h3>
+<div class="stat"><div class="statline"><span>😊 السعادة</span><b id="happyNum">78</b></div><div class="bar"><div class="fill" id="happyBar"></div></div></div>
+<div class="stat"><div class="statline"><span>🥣 الشبع</span><b id="hungerNum">70</b></div><div class="bar"><div class="fill hunger" id="hungerBar"></div></div></div>
+<div class="stat"><div class="statline"><span>🫧 النظافة</span><b id="cleanNum">76</b></div><div class="bar"><div class="fill clean" id="cleanBar"></div></div></div>
+<div class="stat"><div class="statline"><span>🌙 الطاقة</span><b id="energyNum">82</b></div><div class="bar"><div class="fill energy" id="energyBar"></div></div></div>
+<div class="stat"><div class="statline"><span>💗 الثقة بك</span><b id="trustNum">35</b></div><div class="bar"><div class="fill trust" id="trustBar"></div></div></div>
+<div class="coinline"><span>🪙 مصروف البيت</span><b id="coinNum">12 قطعة</b></div><div class="coinline"><span>🌱 نمو ميمي</span><b id="growthNum">فضول صغير</b></div><div class="coinline"><span>⭐ ذكريات سعيدة</span><b id="memoryNum">٠</b></div>
+<div class="bubble" style="min-height:0;font-size:12px;margin-top:14px"><strong>تذكير لطيف</strong><p id="hint">اسأل ميمي عمّا تشعر به قبل أن تختار نشاطًا.</p></div>
+</aside>
+</div>
+<div class="bottomrow"><div class="panel journal"><h3>📖 دفتر الذكريات</h3><div id="journalList"><div class="journal-entry">ستبدأ حكايتكما هنا. كل اختيار يصنع ذكرى.</div></div><button class="btn secondary" id="allJournalBtn" style="width:100%;margin-top:7px">قراءة الدفتر كاملًا</button></div><div class="panel goals"><h3>🌷 أشياء نكتشفها اليوم</h3><ul id="goalList"><li>تعرّف على ما تحبه ميمي.</li><li>اصنع ذكرى جميلة واحدة على الأقل.</li><li>حافظ على احتياجاتها دون إهمال راحتك.</li></ul><div class="bubble" style="min-height:0"><strong>تذكّر</strong><p>لا توجد إجابة مثالية دائمًا. المهم أن تستمع إلى ميمي وتتعلم منها.</p></div></div></div>
+<div class="footer"><small>اللعبة تحفظ تقدمك تلقائيًا على هذا الجهاز.</small><button class="btn gold" id="endDayBtn">🌙 إنهاء اليوم والذهاب للنوم</button><button class="btn secondary" id="homeBtn">⌂ القائمة الرئيسية</button></div>
+</div></section>
+</div>
+<div id="modalBack" class="modal-back hidden"><div class="modal"><div id="modalContent"></div></div></div><div id="toast" class="toast hidden"></div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const SAVE_KEY='mimi_save_v1';
+const initial=()=>({day:1,happy:78,hunger:70,clean:76,energy:82,trust:35,coins:12,growth:0,memories:[],events:[],acted:[],decor:0,photos:0,chapter:0,settings:{sound:false,large:false},lastLine:'صباح الخير! هل سنقضي يومًا جميلًا معًا؟',time:0});
+let s=initial(),toastTimer=null,audioCtx=null;
+const clamp=n=>Math.max(0,Math.min(100,Math.round(n)));
+const arNums=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[+d]);
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+function save(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(s));}catch(e){}}
+function load(){try{const x=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');if(x&&x.day){s=Object.assign(initial(),x);s.settings=Object.assign(initial().settings,x.settings||{});return true}}catch(e){}return false}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.add('hidden'),2300)}
+function sound(freq=520){if(!s.settings.sound)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();let o=audioCtx.createOscillator(),g=audioCtx.createGain();o.connect(g);g.connect(audioCtx.destination);o.frequency.value=freq;o.type='square';g.gain.value=.035;o.start();g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+.12);o.stop(audioCtx.currentTime+.12)}catch(e){}}
+function say(line,who='ميمي'){s.lastLine=line;$('speaker').textContent=who;$('dialogue').textContent=line;sound(620)}
+function addMemory(title,body){s.memories.unshift({day:s.day,title,body});if(s.memories.length>30)s.memories.length=30;renderJournal();save()}
+function renderJournal(){const list=$('journalList');list.innerHTML='';if(!s.memories.length){list.innerHTML='<div class="journal-entry">ستبدأ حكايتكما هنا. كل اختيار يصنع ذكرى.</div>';return} s.memories.slice(0,3).forEach(m=>{const d=document.createElement('div');d.className='journal-entry';d.innerHTML='<b>اليوم '+arNums(m.day)+' · '+escapeHtml(m.title)+'</b><br>'+escapeHtml(m.body);list.appendChild(d)})}
+function escapeHtml(x){return String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function render(){
+['happy','hunger','clean','energy','trust'].forEach(k=>{const v=clamp(s[k]);$(k+'Num').textContent=arNums(v);$(k+'Bar').style.width=v+'%'});
+$('coinNum').textContent=arNums(s.coins)+' قطعة';$('memoryNum').textContent=arNums(s.memories.length);
+$('growthNum').textContent=s.growth<3?'فضول صغير':s.growth<7?'خطوات واثقة':s.growth<12?'قلب شجاع':'روح مبدعة';
+$('dayPill').textContent='اليوم '+arNums(s.day);$('timePill').textContent=s.time<3?'☀ صباح الخير':s.time<6?'☁ بعد الظهر':'🌆 وقت المساء';
+$('sceneCaption').textContent=s.time<3?'البيت الدافئ':s.time<6?'وقت اللعب والتعلّم':'هدوء المساء';
+$('hint').textContent=s.hunger<30?'يبدو أن بطن ميمي فارغ. وجبة صغيرة ستساعدها.':s.energy<25?'بدأ التعب يظهر عليها. جرّب القيلولة أو الحكاية الهادئة.':s.trust<35?'اقترب منها بهدوء واستمع لها لتشعر بالأمان.':s.happy<35?'تحتاج ميمي إلى شيء يبهجها أو إلى حديث حنون.':'احتياجاتها تبدو متوازنة. اكتشف ما الذي يجعلها تبتسم اليوم.';
+$('continueBtn').classList.toggle('hidden',!localStorage.getItem(SAVE_KEY));
+$('goalList').innerHTML='<li>'+(s.acted.length?'جرّب نشاطًا مختلفًا لتكتشف مزيدًا.':'ابدأ اليوم بنشاط تحبه ميمي.')+'</li><li>اصنع ذكرى جميلة واحدة على الأقل.</li><li>'+(s.hunger<35?'قدّم لها وجبة مشبعة.':'حافظ على احتياجاتها دون إهمال راحتك.')+'</li>';
+renderJournal();drawWorld();
+document.querySelectorAll('[data-action]').forEach(b=>b.disabled=s.acted.length>=8);
+}
+function rect(c,x,y,w,h,color){c.fillStyle=color;c.fillRect(Math.round(x),Math.round(y),Math.round(w),Math.round(h))}
+function drawWorld(){
+const c=$('world').getContext('2d');c.imageSmoothingEnabled=false;const w=480,h=270;c.clearRect(0,0,w,h);
+let night=s.time>=6;rect(c,0,0,w,170,night?'#34304f':s.time>=3?'#e9aeb7':'#f5c7bc');rect(c,0,170,w,100,'#bc879e');rect(c,0,170,w,7,'#f5d0c7');
+/* window */rect(c,30,25,112,105,'#94677e');rect(c,38,33,96,89,night?'#35385d':'#a6d7d5');rect(c,84,33,5,89,'#f3d2c5');rect(c,38,75,96,5,'#f3d2c5');
+if(night){rect(c,53,48,5,5,'#fff0a6');rect(c,110,57,4,4,'#fff0a6');rect(c,99,44,3,3,'#fff0a6')}else{rect(c,54,44,25,17,'#ffe4a3');rect(c,104,87,17,19,'#9ac5bd')}
+/* wall art */rect(c,190,35,52,54,'#795a7d');rect(c,196,41,40,42,'#ffe1a8');rect(c,202,47,28,30,'#ef9fb2');rect(c,213,54,6,6,'#ffe6c7');rect(c,206,65,18,4,'#8c5a79');
+/* shelf */rect(c,285,85,130,9,'#8c5d70');rect(c,297,55,24,30,'#b5d8b8');rect(c,301,61,16,21,'#e9c8a5');rect(c,335,44,25,41,'#a78ac5');rect(c,339,49,17,30,'#e7b5cc');rect(c,380,61,23,24,'#f3cf8a');
+/* plant */rect(c,431,133,22,28,'#c77d86');rect(c,437,114,5,20,'#538d70');rect(c,421,110,17,7,'#77b58b');rect(c,440,104,20,8,'#6aa67d');
+/* rug */rect(c,105,213,244,35,'#9b6f9d');rect(c,113,219,228,23,'#d7a0be');for(let i=0;i<9;i++)rect(c,122+i*24,225,10,11,'#f3c6cf');
+/* toy box */rect(c,33,188,58,51,'#c87f8c');rect(c,29,183,66,9,'#f3c5a6');rect(c,44,199,13,15,'#f4d89b');rect(c,64,201,15,11,'#9f9bd6');
+/* bed */rect(c,298,169,151,54,'#b97591');rect(c,289,161,166,14,'#f2c7ce');rect(c,315,150,47,24,'#ffdfc6');rect(c,365,176,72,39,'#e5a1ba');rect(c,374,184,52,7,'#f8c4d0');rect(c,302,221,13,15,'#77536e');rect(c,432,221,13,15,'#77536e');
+/* character sprite positions */let px=185,py=128; if(s.acted.includes('nap')){px=350;py=130}
+/* shadow */rect(c,px-3,py+78,53,7,'#8e627d');
+/* hair */rect(c,px+6,py+2,38,25,'#70414c');rect(c,px+1,py+12,9,24,'#70414c');rect(c,px+39,py+11,9,20,'#70414c');rect(c,px+7,py+23,37,8,'#70414c');
+/* face */rect(c,px+9,py+14,32,31,'#ffc4a4');rect(c,px+4,py+23,7,11,'#ffc4a4');rect(c,px+40,py+23,7,11,'#ffc4a4');
+/* bangs */rect(c,px+9,py+12,12,9,'#70414c');rect(c,px+21,py+17,12,5,'#70414c');
+/* eyes / cheeks */rect(c,px+16,py+28,4,5,'#39273f');rect(c,px+31,py+28,4,5,'#39273f');rect(c,px+12,py+35,7,3,'#f28f9f');rect(c,px+34,py+35,7,3,'#f28f9f');rect(c,px+23,py+37,7,2,'#bc6d75');
+/* dress */rect(c,px+7,py+45,37,25,'#ff9eb9');rect(c,px+3,py+48,8,18,'#ffc4a4');rect(c,px+40,py+48,8,18,'#ffc4a4');rect(c,px+13,py+69,10,12,'#ffc4a4');rect(c,px+29,py+69,10,12,'#ffc4a4');rect(c,px+10,py+79,15,5,'#76516e');rect(c,px+28,py+79,15,5,'#76516e');
+/* bow */rect(c,px+35,py+4,8,7,'#f7cf84');rect(c,px+42,py+1,8,8,'#f7cf84');rect(c,px+38,py+7,5,5,'#ffedbb');
+if(s.happy>75){rect(c,px+21,py+45,10,2,'#a94f69');}
+if(s.time>=6){rect(c,0,0,w,h,'#201b4530');}
+if(s.decor>0){rect(c,157,99,14,14,'#f5d58d');rect(c,163,104,3,3,'#fff6d6');}
+}
+const actionLines={
+feed:[['ميمي','هل يمكن أن نجهز شيئًا لذيذًا معًا؟'],['ميمي','ممم! أحب أن نأكل ونحن نتحدث.'],['ميمي','شكرًا… أشعر بالشبع والراحة الآن.']],
+play:[['ميمي','انظر! هل نلعب لعبة الذاكرة؟'],['ميمي','وجدتها! كنت أعرف أنك ستساعدني.'],['ميمي','ضحكت كثيرًا… لننسَ الوقت قليلًا!']],
+bath:[['ميمي','الماء دافئ؟ حسنًا، سأحضر بطتي!'],['ميمي','أصبحت نظيفة، ورائحة الصابون جميلة.']],
+talk:[['ميمي','أحيانًا لا أعرف كيف أشرح ما أشعر به.'],['ميمي','أحب عندما تستمع إليّ دون أن تستعجلني.'],['ميمي','هل يمكنني أن أخبرك بسر صغير؟']],
+story:[['ميمي','هل تقرأ لي عن نجمة ضاعت في السماء؟'],['ميمي','أظن أن النجمة لم تكن ضائعة… كانت تبحث عن صديق.']],
+nap:[['ميمي','سأغلق عينيّ قليلًا. ابقَ قريبًا، من فضلك.'],['ميمي','حلمت بحديقة مليئة بالفراشات!']],
+explore:[['ميمي','هناك شيء صغير يلمع قرب النافذة!'],['ميمي','وجدنا ورقة على شكل قلب! سأحتفظ بها.']],
+decorate:[['ميمي','هل نختار شيئًا يجعل غرفتنا تشبهنا؟'],['ميمي','هذه الزينة تجعل المكان ألطف… مثل بيتنا.']],
+photo:[['ميمي','ابتسم! أريد أن أتذكر هذا اليوم.'],['ميمي','سأحتفظ بهذه اللحظة في دفترنا.']]
+};
+function modal(html){$('modalContent').innerHTML=html;$('modalBack').classList.remove('hidden')}
+function closeModal(){$('modalBack').classList.add('hidden')}
+function choiceModal(title,desc,choices){modal('<h2>'+title+'</h2><p>'+desc+'</p><div class="choices">'+choices.map((ch,i)=>'<button class="choice" data-choice="'+i+'"><b>'+ch.title+'</b><small>'+ch.sub+'</small></button>').join('')+'</div><button class="btn secondary" id="cancelModal" style="width:100%;margin-top:12px">لاحقًا</button>');document.querySelectorAll('[data-choice]').forEach(b=>b.onclick=()=>{const ch=choices[+b.dataset.choice];closeModal();ch.run()});$('cancelModal').onclick=closeModal}
+function doAction(a){
+if(s.acted.length>=8){toast('أنجزتم أنشطة كثيرة اليوم. حان وقت الراحة أو إنهاء اليوم.');return}
+s.acted.push(a);s.time=Math.min(8,s.time+1);let line='';
+if(a==='feed'){
+if(s.coins<1){s.acted.pop();toast('لا توجد قطع كافية للطعام الآن. جرّب استكشافًا أو نشاطًا مجانيًا.');return}
+choiceModal('ماذا نجهّز لميمي؟','كل وجبة لها أثر مختلف. لديك '+arNums(s.coins)+' قطعة.',[
+{title:'🥪 شطيرة وفاكهة — قطعة واحدة',sub:'وجبة متوازنة وسريعة',run:()=>{s.coins-=1;s.hunger=clamp(s.hunger+30);s.happy=clamp(s.happy+5);s.trust=clamp(s.trust+2);line='رائحة الفاكهة جميلة! أحب عندما نعدّ الطعام معًا.';after('feed',line)}},
+{title:'🍲 حساء دافئ — قطعتان',sub:'يشبعها ويمنحها شعورًا بالراحة',run:()=>{if(s.coins<2){s.acted.pop();toast('تحتاج هذه الوجبة إلى قطعتين.');return} s.coins-=2;s.hunger=clamp(s.hunger+43);s.happy=clamp(s.happy+8);s.trust=clamp(s.trust+4);after('feed','الحساء دافئ ولذيذ… هل نجلس معًا قليلًا؟')}},
+{title:'🍪 وجبة خفيفة — مجانًا',sub:'تساعد قليلًا لكنها لا تكفي طويلًا',run:()=>{s.hunger=clamp(s.hunger+14);s.happy=clamp(s.happy+2);after('feed','البسكويت لذيذ! لكنني سأجوع لاحقًا.')}}
+]);return
+}
+if(a==='play'){
+choiceModal('وقت اللعب!','ميمي اختارت لعبة ذاكرة صغيرة. افتح البطاقات واعثر على زوجين متشابهين.',[
+{title:'🧠 لعبة الذاكرة',sub:'اختبر ذاكرتك مع ميمي',run:startMemory},
+{title:'🪁 لعب حرّ',sub:'نشاط بسيط يزيد السعادة',run:()=>{s.happy=clamp(s.happy+16);s.energy=clamp(s.energy-12);s.trust=clamp(s.trust+5);after(a,'ضحكنا حتى تعبنا قليلًا. هذه من أجمل لحظاتي!')}}
+]);return
+}
+if(a==='bath'){s.clean=clamp(s.clean+38);s.happy=clamp(s.happy+4);s.energy=clamp(s.energy-5);s.trust=clamp(s.trust+3);line=pick(actionLines.bath.map(x=>x[1]));}
+if(a==='talk'){
+choiceModal('استمع إلى ميمي','كيف ستساعدها على الشعور بأنها مفهومة؟',[
+{title:'💗 أستمع دون مقاطعة',sub:'أمنحها مساحة لتعبّر عن نفسها',run:()=>{s.trust=clamp(s.trust+12);s.happy=clamp(s.happy+5);s.growth++;after(a,'شكرًا لأنك استمعت إليّ. أشعر أنني أستطيع قول أي شيء لك.');addMemory('حديث من القلب','استمعنا لبعضنا بهدوء، وشعرت ميمي أن مشاعرها مهمة.');}},
+{title:'🌱 أساعدها في تسمية شعورها',sub:'نتعلم معًا كيف نفهم المشاعر',run:()=>{s.trust=clamp(s.trust+8);s.growth++;s.happy=clamp(s.happy+3);after(a,'إذن هذا اسمه قلق؟ عندما أعرف اسمه يصبح أسهل قليلًا.');addMemory('اسم الشعور','تعلمت ميمي أن تسمّي شعورها بدل أن تخفيه.');}},
+{title:'🎈 أغيّر الموضوع بلطف',sub:'أمنحها استراحة قصيرة',run:()=>{s.happy=clamp(s.happy+7);s.trust=clamp(s.trust+1);after(a,'حسنًا، لنرسم شيئًا مضحكًا الآن!');}}
+]);return
+}
+if(a==='story'){s.energy=clamp(s.energy-4);s.happy=clamp(s.happy+9);s.trust=clamp(s.trust+5);s.growth++;line=pick(actionLines.story.map(x=>x[1]));addMemory('حكاية قبل المساء','قرأنا قصة نجمة تبحث عن صديق وتحدثنا عن الشجاعة واللطف.')}
+if(a==='nap'){s.energy=clamp(s.energy+34);s.happy=clamp(s.happy+4);s.hunger=clamp(s.hunger-7);line=pick(actionLines.nap.map(x=>x[1]));}
+if(a==='explore'){
+choiceModal('مغامرة صغيرة','ماذا اكتشفت ميمي قرب النافذة؟',[
+{title:'🍃 نجمع أوراقًا جميلة',sub:'اكتشاف مجاني يقوّي الفضول',run:()=>{s.growth++;s.happy=clamp(s.happy+9);s.energy=clamp(s.energy-8);s.trust=clamp(s.trust+3);after(a,'انظر إلى هذه الورقة! تشبه قلبًا صغيرًا. سأضعها في دفترنا.');addMemory('كنز من الحديقة','وجدنا ورقة على شكل قلب، وقررت ميمي الاحتفاظ بها.');}},
+{title:'🪙 نبحث عن قطع للبيت',sub:'قد تعثر على قطعة أو اثنتين',run:()=>{let n=Math.random()>.35?2:1;s.coins+=n;s.energy=clamp(s.energy-10);after(a,'وجدت '+arNums(n)+' قطعة! يمكننا استخدامها في شيء نحتاجه.');}}
+]);return
+}
+if(a==='decorate'){
+choiceModal('نغيّر شكل الغرفة','اختر لمسة جديدة. كل ديكور يكلف قطعة واحدة.',[
+{title:'🌟 نجوم مضيئة — قطعة واحدة',sub:'زينة صغيرة قرب السرير',run:()=>{if(s.coins<1){s.acted.pop();toast('تحتاج إلى قطعة واحدة.');return}s.coins--;s.decor++;s.happy=clamp(s.happy+10);s.trust=clamp(s.trust+3);after(a,'النجوم! كأن السماء دخلت غرفتي.');addMemory('غرفة النجوم','اخترنا زينة جديدة لغرفة ميمي.');}},
+{title:'🖼️ لوحة رسم — قطعتان',sub:'شيء تصنعانه معًا',run:()=>{if(s.coins<2){s.acted.pop();toast('تحتاج إلى قطعتين.');return}s.coins-=2;s.decor++;s.growth++;s.happy=clamp(s.happy+12);after(a,'هذه اللوحة من صنعنا نحن الاثنين. إنها المفضلة لدي!');addMemory('لوحة من صنعنا','رسمنا لوحة وعلّقناها في الغرفة.');}}
+]);return
+}
+if(a==='photo'){s.photos++;s.happy=clamp(s.happy+7);s.trust=clamp(s.trust+4);addMemory('صورة لا تُنسى','التقطنا صورة خيالية لذكرى اليوم رقم '+arNums(s.day)+'.');line='هذه الصورة تذكّرني بأن الأيام العادية قد تصبح مميزة.';if(s.photos%3===0){s.coins+=1;line+=' وجدت ميمي قطعة نقدية خلف إطار الصورة!';s.coins++}}
+after(a,line||pick((actionLines[a]||[['ميمي','كان وقتًا جميلًا!']]).map(x=>x[1])));
+}
+function after(a,line){say(line);render();save();sound(740);if(s.acted.length>=8)setTimeout(()=>toast('انتهت أنشطة اليوم تقريبًا. يمكنك إنهاء اليوم عندما تكون مستعدًا.'),250)}
+function startMemory(){
+const icons=['🍓','⭐','🐱','🍓','⭐','🐱'];for(let i=icons.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[icons[i],icons[j]]=[icons[j],icons[i]]}
+let open=[],matched=[],moves=0;modal('<h2>لعبة الذاكرة</h2><p>اعثر على الأزواج المتشابهة. كل زوج صحيح يجعل ميمي أكثر سعادة!</p><div class="memory-grid">'+icons.map((x,i)=>'<button class="memory-card" data-card="'+i+'">؟</button>').join('')+'</div><p id="memoryStatus">الأزواج: ٠ من ٣</p><button class="btn secondary" id="quitMemory" style="width:100%">إنهاء اللعبة</button>');
+$('quitMemory').onclick=()=>{closeModal();s.happy=clamp(s.happy+3);after('play','لعبنا قليلًا، وسنجرّب مرة أخرى لاحقًا.')};
+document.querySelectorAll('[data-card]').forEach(b=>b.onclick=()=>{let i=+b.dataset.card;if(matched.includes(i)||open.includes(i)||open.length>=2)return;b.textContent=icons[i];b.classList.add('revealed');open.push(i);sound(400+i*70);if(open.length===2){moves++;if(icons[open[0]]===icons[open[1]]){matched.push(...open);open.forEach(k=>document.querySelector('[data-card="'+k+'"]').classList.add('matched'));open=[];$('memoryStatus').textContent='الأزواج: '+arNums(matched.length/2)+' من ٣';if(matched.length===6){setTimeout(()=>{closeModal();s.happy=clamp(s.happy+20);s.energy=clamp(s.energy-12);s.trust=clamp(s.trust+7);s.growth++;addMemory('لعبة الذاكرة','عثرنا على كل الأزواج معًا بعد '+arNums(moves)+' محاولات.');after('play','نجحنا! نحن فريق ممتاز. هل نلعبها مرة أخرى غدًا؟')},500)}}else{setTimeout(()=>{open.forEach(k=>{let el=document.querySelector('[data-card="'+k+'"]');if(el){el.textContent='؟';el.classList.remove('revealed')}});open=[]},650)}}})
+}
+const events=[
+{day:2,title:'صوت المطر',desc:'بدأ المطر يطرق النافذة. ميمي تحمل دميتها وتنظر إلى السماء.',choices:[{title:'☔ نصنع خيمة من البطانيات',sub:'مغامرة داخل البيت',run:()=>{s.happy=clamp(s.happy+14);s.trust=clamp(s.trust+5);s.energy=clamp(s.energy-8);s.growth++;return'صارت الخيمة قصرًا سريًا! المطر لم يعد مخيفًا.'}},{title:'📚 نقرأ قصة عن المطر',sub:'لحظة هادئة ودافئة',run:()=>{s.happy=clamp(s.happy+8);s.trust=clamp(s.trust+7);return'صوت المطر مع القصة جعلني أشعر بالدفء.'}}]},
+{day:3,title:'رسمة غريبة',desc:'رسمت ميمي بيتًا كبيرًا وشخصين صغيرين، ثم أخفت الورقة بسرعة.',choices:[{title:'💗 أسألها عمّا رسمت برفق',sub:'أترك لها حرية الكلام',run:()=>{s.trust=clamp(s.trust+10);s.growth++;return'قلت إنني أرسم بيتًا يشعر فيه الجميع بالأمان. هل يمكن أن نعلّقها؟'}},{title:'🎨 أقترح أن نرسم معًا',sub:'نحوّل اللحظة إلى نشاط مشترك',run:()=>{s.happy=clamp(s.happy+12);s.growth++;return'رسمنا بيتًا بألوان كثيرة، ووضعت ميمي نجمة فوق الباب.'}}]},
+{day:4,title:'صديقة جديدة',desc:'سمعت ميمي مواءً خافتًا قرب الباب. هناك قطة صغيرة تبحث عن مكان جاف.',choices:[{title:'🥛 نساعدها ونبحث عن صاحبها',sub:'نتصرف بلطف ومسؤولية',run:()=>{if(s.coins>0)s.coins--;s.trust=clamp(s.trust+8);s.happy=clamp(s.happy+10);s.growth++;return'صارت القطة أقل خوفًا. تعلمت ميمي أن اللطف يعني أيضًا الاهتمام بسلامة الآخرين.'}},{title:'🧺 نصنع لها مأوى مؤقتًا',sub:'نساعدها دون أن نحتفظ بها',run:()=>{s.happy=clamp(s.happy+7);s.trust=clamp(s.trust+6);return'جهزنا صندوقًا دافئًا واتفقنا على سؤال الجيران عن صاحبها.'}}]},
+{day:5,title:'يوم متعب',desc:'ميمي هادئة أكثر من المعتاد، وتقول إن رأسها يؤلمها قليلًا. لا يبدو أنها تريد اللعب.',choices:[{title:'🌡️ أطمئن عليها وأطلب مساعدة بالغ موثوق',sub:'الراحة والسلامة أولًا',run:()=>{s.energy=clamp(s.energy+18);s.trust=clamp(s.trust+10);s.coins=Math.max(0,s.coins-1);return'ارتاحت ميمي لأننا أخذنا تعبها بجدية. قضينا اليوم بهدوء.'}},{title:'🛏️ نلغي الأنشطة ونرتاح',sub:'نمنحها وقتًا دون ضغط',run:()=>{s.energy=clamp(s.energy+24);s.happy=clamp(s.happy+4);s.trust=clamp(s.trust+7);return'لم نحتج إلى خطة كبيرة. أحيانًا أفضل ما نفعله هو الراحة.'}}]},
+{day:6,title:'الشيء الذي تخافه',desc:'اعترفت ميمي أنها تخاف من الظلام أحيانًا، لكنها كانت تخجل من قول ذلك.',choices:[{title:'🕯️ نصنع مصباحًا ورقيًا صغيرًا',sub:'نحوّل الخوف إلى مشروع فني',run:()=>{s.growth++;s.trust=clamp(s.trust+12);s.happy=clamp(s.happy+8);return'صار لدينا مصباح ورقي! ما زلت أخاف قليلًا، لكنني لم أعد وحدي.'}},{title:'🤝 نتفق على روتين مسائي مطمئن',sub:'خطوات صغيرة وثابتة',run:()=>{s.trust=clamp(s.trust+14);s.energy=clamp(s.energy+5);return'اتفقنا أن نقرأ صفحة ونترك ضوءًا صغيرًا قبل النوم.'}}]},
+{day:7,title:'رسالة إلى المستقبل',desc:'وجدت ميمي ظرفًا فارغًا وقالت: ماذا لو كتبنا رسالة لأنفسنا في المستقبل؟',choices:[{title:'✉️ نكتب أحلامنا الصغيرة',sub:'ذكرى تبقى في دفترنا',run:()=>{s.happy=clamp(s.happy+12);s.trust=clamp(s.trust+10);s.growth+=2;return'كتبت ميمي أنها تريد أن تصبح شجاعة وأن تظل لطيفة. وضعت الرسالة بين صفحات الدفتر.'}},{title:'🌱 نكتب شيئًا تعلمناه هذا الأسبوع',sub:'نحتفل بالنمو لا بالكمال',run:()=>{s.growth+=2;s.trust=clamp(s.trust+8);return'كتبنا أن طلب المساعدة ليس ضعفًا، وأن كل يوم فرصة للبدء من جديد.'}}]}
+];
+function eventForDay(day){return events.find(e=>e.day===day)}
+function startDayEvent(){const ev=eventForDay(s.day);if(!ev||s.events.includes(s.day))return;choiceModal('حدث اليوم: '+ev.title,ev.desc,ev.choices.map(ch=>({title:ch.title,sub:ch.sub,run:()=>{let result=ch.run();s.events.push(s.day);addMemory(ev.title,result);say(result,'ميمي');render();save();toast('أصبحت هذه اللحظة جزءًا من حكايتكما.')}})))}
+function endDay(){
+if(s.acted.length===0){choiceModal('هل نُنهي اليوم؟','لم تقضيا وقتًا معًا بعد. يمكنك البقاء قليلًا أو بدء يوم جديد.',[{title:'🌙 إنهاء اليوم',sub:'سنبدأ غدًا من جديد',run:advanceDay},{title:'💗 البقاء قليلًا',sub:'أعود إلى الغرفة',run:()=>{say('حسنًا! ما زال لدينا وقت صغير معًا.');}}]);return}
+advanceDay()
+}
+function advanceDay(){
+s.day++;s.time=0;s.acted=[];s.hunger=clamp(s.hunger-16);s.clean=clamp(s.clean-12);s.energy=clamp(s.energy+18);s.happy=clamp(s.happy-3);s.coins+=2;
+if(s.day>7){s.chapter++;if(s.chapter%1===0){s.happy=clamp(s.happy+5)}}
+save();render();sound(520);
+const msg=s.day===2?'يوم جديد! ميمي تركت لك رسمة صغيرة قرب السرير.':s.day===7?'مرّ أسبوع مليء بالتفاصيل الصغيرة. لنكتشف ما الذي تغيّر في ميمي.':s.day>7?'صباح جديد، وحكاية أخرى تنتظر أن تُكتب.':'صباح جديد! ميمي مستعدة لاكتشاف شيء مختلف اليوم.';
+say(msg,'مذكرات البيت');modal('<div style="text-align:center"><div class="ending-art">🌤️</div><h2>صباح اليوم '+arNums(s.day)+'</h2><p>'+msg+'</p><p>حصلت على قطعتين لمصاريف البيت. تذكّر أن احتياجات ميمي تتغير مع مرور الوقت.</p><button class="btn gold" id="newDayOk" style="width:100%">لنبدأ اليوم ✨</button></div>');$('newDayOk').onclick=()=>{closeModal();startDayEvent()};
+}
+function showJournal(){modal('<h2>📖 دفتر الذكريات</h2><p>كل لحظة كتبتماها جزء من قصة ميمي.</p>'+(s.memories.length?s.memories.map(m=>'<div class="journal-entry"><b>اليوم '+arNums(m.day)+' · '+escapeHtml(m.title)+'</b><br>'+escapeHtml(m.body)+'</div>').join(''):'<p>لم تُكتب ذكريات بعد. ابدآ بنشاط صغير.</p>')+'<button class="btn secondary" id="closeJournal" style="width:100%;margin-top:12px">العودة</button>');$('closeJournal').onclick=closeModal}
+function showSettings(){modal('<h2>⚙ الإعدادات</h2><p>خصص التجربة كما تحب.</p><div class="setting-row"><label for="soundToggle">الأصوات البسيطة</label><input id="soundToggle" type="checkbox" '+(s.settings.sound?'checked':'')+'></div><div class="setting-row"><label for="largeToggle">نص أكبر</label><input id="largeToggle" type="checkbox" '+(s.settings.large?'checked':'')+'></div><div class="setting-row"><label>حفظ التقدم</label><button class="btn secondary" id="saveNow">حفظ الآن</button></div><button class="btn secondary" id="resetSave" style="width:100%;margin-top:12px">بدء حكاية جديدة من الصفر</button><button class="btn gold" id="closeSettings" style="width:100%;margin-top:10px">تم</button>');$('soundToggle').onchange=e=>{s.settings.sound=e.target.checked;save()};$('largeToggle').onchange=e=>{s.settings.large=e.target.checked;document.body.style.fontSize=e.target.checked?'18px':'';save()};$('saveNow').onclick=()=>{save();toast('تم حفظ التقدم على هذا الجهاز.')};$('resetSave').onclick=()=>choiceModal('بدء حكاية جديدة؟','سيتم استبدال الحفظ الحالي. هل أنت متأكد؟',[{title:'🧹 نعم، ابدأ من جديد',sub:'لن يمكن استعادة الحفظ السابق',run:()=>{s=initial();save();closeModal();showGame();toast('بدأت حكاية جديدة.')}},{title:'العودة',sub:'أحتفظ بتقدمي الحالي',run:showSettings}]);$('closeSettings').onclick=closeModal}
+function showHow(){modal('<h2>كيف ألعب؟</h2><p>🌷 <b>اعتنِ بميمي:</b> الطعام يرفع الشبع، والاستحمام يحسن النظافة، والقيلولة تعيد الطاقة.</p><p>💗 <b>ابنِ الثقة:</b> الحديث والاستماع والقراءة تمنح ميمي شعورًا بالأمان. اختر ما يناسب حالتها.</p><p>🧩 <b>العب واكتشف:</b> لعبة ذاكرة، أحداث قصة متفرعة، استكشاف، وتزيين الغرفة.</p><p>📖 <b>اجمع الذكريات:</b> خياراتك تؤثر في المشاعر والنمو. كل يوم يضيف حدثًا جديدًا في الأسبوع الأول، وبعده تستمر الأيام مع حكايات مفتوحة.</p><p>🌙 لديك حتى ٨ أنشطة في اليوم. يمكنك إنهاء اليوم في أي وقت. تقدمك يُحفظ تلقائيًا على هذا الجهاز.</p><button class="btn gold" id="howClose" style="width:100%">فهمت، لنلعب!</button>');$('howClose').onclick=closeModal}
+function showGame(){ $('titleScreen').classList.add('hidden');$('gameScreen').classList.remove('hidden');render();if(s.day===1&&s.acted.length===0&&!s.memories.length){say('صباح الخير! اسمي ميمي. هل تساعدني في اكتشاف يوم جميل؟');}else say(s.lastLine||'مرحبًا بعودتك!');}
+$('startBtn').onclick=()=>{if(localStorage.getItem(SAVE_KEY)){choiceModal('حكاية جديدة أم متابعة؟','لديك حكاية محفوظة على هذا الجهاز.',[{title:'🌷 بدء حكاية جديدة',sub:'ابدأ من اليوم الأول',run:()=>{s=initial();save();showGame()}},{title:'↻ متابعة الحكاية',sub:'أعود إلى آخر نقطة وصلت إليها',run:()=>{load();showGame()}}])}else{s=initial();save();showGame()}};
+$('continueBtn').onclick=()=>{load();showGame()};
+$('howBtn').onclick=showHow;$('settingsBtn').onclick=showSettings;$('pauseBtn').onclick=showSettings;$('journalBtn').onclick=showJournal;$('allJournalBtn').onclick=showJournal;$('endDayBtn').onclick=endDay;$('homeBtn').onclick=()=>choiceModal('العودة للقائمة؟','سيتم حفظ تقدمك تلقائيًا.',[{title:'⌂ العودة للقائمة',sub:'يمكنك المتابعة لاحقًا',run:()=>{$('gameScreen').classList.add('hidden');$('titleScreen').classList.remove('hidden');save()}},{title:'البقاء في اللعبة',sub:'أكمل يومك الحالي',run:()=>{}}]);
+document.querySelectorAll('[data-action]').forEach(b=>b.onclick=()=>doAction(b.dataset.action));
+$('modalBack').addEventListener('click',e=>{if(e.target===$('modalBack'))closeModal()});
+if(load()){$('continueBtn').classList.remove('hidden');}
+drawWorld();
+})();
+</script>
+</body></html>

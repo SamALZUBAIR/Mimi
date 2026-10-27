@@ -1,2 +1,0 @@
-Mimi repository write-access test.
-Created to verify GitHub integration write access.

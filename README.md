@@ -5,7 +5,7 @@
 ## افتح النسخة الحالية
 
 **معاينة الإصدار الحالي:**  
-https://rawcdn.githack.com/SamALZUBAIR/Mimi/7bb5172b42b08b495b4f1a8658d4d9eb19170117/index.html
+https://rawcdn.githack.com/SamALZUBAIR/Mimi/9a9b7a7aa7e18c7d543a1bac36cb6cad9a63654a/index.html
 
 إذا عرضت خدمة المعاينة صفحة تأكيد، اختر المتابعة إلى الصفحة. هذا رابط إصدار ثابت لتجنّب عرض نسخة مخزنة مؤقتًا من الفرع.
 

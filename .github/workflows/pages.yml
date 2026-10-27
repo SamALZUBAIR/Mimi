@@ -1,12 +1,6 @@
-name: Deploy Mimi game preview
+name: Deploy GitHub Pages preview
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'index.html'
-      - 'README.md'
-      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:

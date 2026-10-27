@@ -1,1 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="280" viewBox="0 0 640 280" shape-rendering="crispEdges"><rect width="640" height="280" fill="#17262b"/><path d="M0 150V80H50V55H82V130H126V76H165V140H210V60H245V120H280V88H330V132H370V64H405V130H450V76H500V120H540V56H575V120H640V180H0Z" fill="#26383a"/><rect y="180" width="640" height="100" fill="#282c29"/><path d="M40 170V70H82V170M520 170V60H565V170" fill="#0d171a"/><rect x="51" y="91" width="20" height="30" fill="#c9a35c"/><rect x="532" y="80" width="20" height="30" fill="#c9a35c"/><path d="M0 190H640V280H0Z" fill="#3b3025"/><path d="M0 202H640M0 238H640" stroke="#8b7047" stroke-width="4"/><path d="M80 202V238M220 202V238M360 202V238M500 202V238" stroke="#59442f" stroke-width="4"/><path d="M0 0H640V12H0Z" fill="#090f12"/><rect x="12" y="12" width="616" height="256" fill="none" stroke="#596459" stroke-width="4"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 240 105" shape-rendering="crispEdges">
+<rect width="240" height="105" fill="#111d22"/>
+<rect width="240" height="42" fill="#1c2b30"/>
+<path d="M0 16H18V7H29V28H39V13H50V22H62V5H77V29H89V16H102V9H114V27H127V12H139V31H153V6H167V20H180V11H192V27H204V4H219V24H231V15H240V45H0Z" fill="#26383b"/>
+<path d="M0 30H240V60H0Z" fill="#1a292d"/>
+<path d="M5 31V12H25V31M31 33V20H42V33M50 31V10H68V31M83 33V19H96V33M104 31V13H121V31M132 32V17H145V32M151 31V8H172V31M184 32V15H199V32M209 31V12H231V31" fill="#101a1d"/>
+<g fill="#b68e4c"><rect x="10" y="17" width="3" height="4"/><rect x="17" y="17" width="3" height="4"/><rect x="55" y="16" width="4" height="5"/><rect x="62" y="16" width="3" height="5"/><rect x="109" y="18" width="4" height="4"/><rect x="116" y="18" width="3" height="4"/><rect x="157" y="13" width="4" height="5"/><rect x="165" y="13" width="3" height="5"/><rect x="215" y="17" width="4" height="4"/></g>
+<path d="M0 39H240V66H0Z" fill="#344347"/>
+<path d="M0 43H240V45H0Z" fill="#60706a"/>
+<path d="M0 49H240V52H0Z" fill="#202e31"/>
+<!-- distant road and mist -->
+<path d="M0 57L240 54V88H0Z" fill="#29383a"/>
+<path d="M0 65H240V69H0ZM0 78H240V80H0Z" fill="#3d4844"/>
+<path d="M18 59L36 59L24 89H7ZM208 56H225L238 90H220Z" fill="#182528"/>
+<!-- watch towers -->
+<rect x="19" y="13" width="17" height="35" fill="#0c1518"/><rect x="16" y="10" width="23" height="5" fill="#45544e"/><rect x="21" y="20" width="13" height="9" fill="#c19b54"/><rect x="23" y="22" width="9" height="5" fill="#e2bd72"/><rect x="21" y="35" width="13" height="3" fill="#364641"/>
+<rect x="201" y="9" width="19" height="42" fill="#0c1518"/><rect x="198" y="6" width="25" height="5" fill="#45544e"/><rect x="204" y="17" width="13" height="10" fill="#c19b54"/><rect x="206" y="19" width="9" height="6" fill="#e2bd72"/><rect x="204" y="35" width="13" height="3" fill="#364641"/>
+<!-- light cones -->
+<path d="M20 17L35 17L62 65H0Z" fill="#d8c17a" opacity=".07"/><path d="M203 14L218 14L240 67H176Z" fill="#d8c17a" opacity=".08"/>
+<!-- checkpoint building -->
+<rect x="63" y="25" width="114" height="41" fill="#10191c"/><rect x="67" y="29" width="106" height="33" fill="#354345"/><rect x="70" y="32" width="100" height="27" fill="#172326"/>
+<rect x="73" y="35" width="94" height="3" fill="#53615a"/><rect x="78" y="42" width="84" height="17" fill="#0c1416"/>
+<rect x="84" y="45" width="29" height="11" fill="#a8874e"/><rect x="87" y="47" width="23" height="7" fill="#e0bd72"/>
+<rect x="118" y="45" width="37" height="11" fill="#5e6c64"/><rect x="121" y="48" width="31" height="6" fill="#a3a58c"/>
+<rect x="61" y="24" width="118" height="3" fill="#68766b"/><rect x="59" y="64" width="122" height="4" fill="#0b1214"/>
+<!-- checkpoint sign -->
+<rect x="88" y="16" width="64" height="8" fill="#11191b" stroke="#a58a52" stroke-width="1"/><text x="120" y="22" font-size="5" font-family="monospace" fill="#e0bd72" text-anchor="middle">BORDER POST 06</text>
+<!-- foreground barrier and road -->
+<rect x="0" y="86" width="240" height="19" fill="#171e1e"/><path d="M0 87H240V90H0Z" fill="#766044"/><path d="M0 96H240V98H0Z" fill="#333c38"/>
+<rect x="22" y="80" width="4" height="16" fill="#11191b"/><rect x="18" y="79" width="12" height="4" fill="#d1b56f"/><rect x="214" y="80" width="4" height="16" fill="#11191b"/><rect x="210" y="79" width="12" height="4" fill="#d1b56f"/>
+<!-- rain streaks -->
+<g stroke="#819590" stroke-width=".6" opacity=".34"><path d="M8 2L4 12M43 6L39 16M74 1L70 11M97 9L93 19M127 0L123 10M147 7L143 17M179 2L175 12M193 10L189 20M233 2L229 12M55 39L51 49M88 51L84 61M137 34L133 44M168 42L164 52M226 39L222 49"/></g>
+<!-- vignette frame -->
+<rect x="1" y="1" width="238" height="103" fill="none" stroke="#53615a" stroke-width="2"/>
+</svg>

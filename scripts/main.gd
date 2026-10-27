@@ -31,6 +31,12 @@ var age_job_label: Label
 var permit_label: Label
 var purpose_label: Label
 var detail_label: Label
+var passport_field_box: VBoxContainer
+var permit_field_box: VBoxContainer
+var comparison_label: Label
+var selected_field: Dictionary = {}
+var compared_fields: Dictionary = {}
+var field_buttons: Dictionary = {}
 var result_label: Label
 var allow_button: Button
 var refuse_button: Button
@@ -117,25 +123,58 @@ func _build_interface() -> void:
 	document_panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	document_panel.add_theme_stylebox_override("panel", _panel_style(Color(0.78, 0.73, 0.59, 0.98), Color(0.22, 0.25, 0.21)))
 	main_row.add_child(document_panel)
-	var doc_box := VBoxContainer.new()
-	doc_box.add_theme_constant_override("separation", 9)
-	document_panel.add_child(doc_box)
-	var doc_title := _label("وثيقة العبور", 23, Color(0.16, 0.20, 0.17))
-	doc_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	doc_box.add_child(doc_title)
-	var separator := HSeparator.new()
-	doc_box.add_child(separator)
+	var docs_row := HBoxContainer.new()
+	docs_row.add_theme_constant_override("separation", 8)
+	document_panel.add_child(docs_row)
+
+	var passport_card := PanelContainer.new()
+	passport_card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	passport_card.add_theme_stylebox_override("panel", _panel_style(Color(0.83, 0.79, 0.67), Color(0.44, 0.46, 0.38)))
+	docs_row.add_child(passport_card)
+	var passport_box := VBoxContainer.new()
+	passport_box.add_theme_constant_override("separation", 7)
+	passport_card.add_child(passport_box)
+	var passport_title := _label("جواز السفر", 20, Color(0.16, 0.20, 0.17))
+	passport_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	passport_box.add_child(passport_title)
+	var passport_rule := HSeparator.new()
+	passport_box.add_child(passport_rule)
+	passport_field_box = VBoxContainer.new()
+	passport_field_box.add_theme_constant_override("separation", 4)
+	passport_box.add_child(passport_field_box)
+	var passport_stamp := _label("إدارة السجل المدني  •  وثيقة شخصية", 11, Color(0.38, 0.39, 0.32))
+	passport_stamp.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	passport_box.add_child(passport_stamp)
+
+	var permit_card := PanelContainer.new()
+	permit_card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	permit_card.add_theme_stylebox_override("panel", _panel_style(Color(0.77, 0.72, 0.58), Color(0.44, 0.46, 0.38)))
+	docs_row.add_child(permit_card)
+	var permit_box := VBoxContainer.new()
+	permit_box.add_theme_constant_override("separation", 7)
+	permit_card.add_child(permit_box)
+	var permit_title := _label("تصريح العبور", 20, Color(0.16, 0.20, 0.17))
+	permit_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	permit_box.add_child(permit_title)
+	var permit_rule := HSeparator.new()
+	permit_box.add_child(permit_rule)
+	permit_field_box = VBoxContainer.new()
+	permit_field_box.add_theme_constant_override("separation", 4)
+	permit_box.add_child(permit_field_box)
 	permit_label = _doc_label()
-	doc_box.add_child(permit_label)
+	permit_box.add_child(permit_label)
 	purpose_label = _doc_label()
-	doc_box.add_child(purpose_label)
+	permit_box.add_child(purpose_label)
 	detail_label = _doc_label()
 	detail_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	detail_label.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	doc_box.add_child(detail_label)
-	var warning := _label("افحص المعلومات قبل اتخاذ القرار.", 14, Color(0.35, 0.29, 0.19))
+	permit_box.add_child(detail_label)
+	comparison_label = _label("اضغط على الحقول المتناظرة لمقارنتها.", 13, Color(0.28, 0.30, 0.24))
+	comparison_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	permit_box.add_child(comparison_label)
+	var warning := _label("افحص البيانات قبل اتخاذ القرار.", 12, Color(0.35, 0.29, 0.19))
 	warning.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	doc_box.add_child(warning)
+	permit_box.add_child(warning)
 
 	var footer := PanelContainer.new()
 	footer.add_theme_stylebox_override("panel", _panel_style(Color(0.045, 0.06, 0.06, 0.96), Color(0.39, 0.43, 0.36)))
@@ -175,10 +214,14 @@ func _show_visitor() -> void:
 	silver_label.text = "الرصيد: %d فضة   |   إنذارات: %d" % [silver, warnings]
 	name_label.text = str(current_visitor.name)
 	age_job_label.text = "%s سنة  •  %s" % [current_visitor.age, current_visitor.job]
-	permit_label.text = "رقم التصريح:  %s" % current_visitor.permit
+	var permit_number := str(current_visitor.permit)
+	if bool(current_visitor.risk):
+		permit_number = permit_number + "-X"
+	permit_label.text = "رقم التصريح:  %s" % permit_number
 	purpose_label.text = "سبب الزيارة:  %s" % current_visitor.purpose
 	detail_label.text = "ملاحظات الموظف:\n%s" % current_visitor.detail
-	status_label.text = "اقرأ الوثيقة وقارن بياناتها. بعض الحالات تحتاج إلى فحص إضافي."
+	_build_document_fields(permit_number)
+	status_label.text = "قارن الاسم ورقم الملف والعمر بين الوثيقتين. راجع ملاحظات الفحص قبل القرار."
 	result_label.text = ""
 	allow_button.disabled = false
 	refuse_button.disabled = false
@@ -187,6 +230,69 @@ func _show_visitor() -> void:
 	allow_button.visible = true
 	refuse_button.visible = true
 	inspect_button.visible = true
+
+func _build_document_fields(permit_number: String) -> void:
+	for child in passport_field_box.get_children():
+		child.queue_free()
+	for child in permit_field_box.get_children():
+		child.queue_free()
+	field_buttons.clear()
+	compared_fields.clear()
+	selected_field.clear()
+	var passport_values := {"الاسم": str(current_visitor.name), "رقم الملف": str(current_visitor.permit), "العمر": str(current_visitor.age), "المهنة": str(current_visitor.job)}
+	var permit_values := {"الاسم": str(current_visitor.name), "رقم الملف": permit_number, "العمر": str(current_visitor.age), "المهنة": str(current_visitor.job)}
+	for key in passport_values.keys():
+		var button := _document_field_button(str(key), str(passport_values[key]), "passport", str(key))
+		passport_field_box.add_child(button)
+		field_buttons["passport:" + str(key)] = button
+	for key in permit_values.keys():
+		var button := _document_field_button(str(key), str(permit_values[key]), "permit", str(key))
+		permit_field_box.add_child(button)
+		field_buttons["permit:" + str(key)] = button
+
+func _document_field_button(field_name: String, value: String, side: String, key: String) -> Button:
+	var button := Button.new()
+	button.text = field_name + "  |  " + value
+	button.alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	button.custom_minimum_size = Vector2(0, 34)
+	button.add_theme_font_size_override("font_size", 14)
+	button.add_theme_color_override("font_color", Color(0.19, 0.22, 0.18))
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color(0.88, 0.84, 0.72)
+	style.border_color = Color(0.66, 0.62, 0.50)
+	style.set_border_width_all(1)
+	style.content_margin_left = 6
+	style.content_margin_right = 6
+	button.add_theme_stylebox_override("normal", style)
+	button.add_theme_stylebox_override("hover", style.duplicate())
+	button.pressed.connect(_compare_document_field.bind(side, key, value))
+	return button
+
+func _compare_document_field(side: String, key: String, value: String) -> void:
+	if selected_field.is_empty():
+		selected_field = {"side": side, "key": key, "value": value}
+		comparison_label.text = "اختر حقل " + key + " من الوثيقة الأخرى."
+		comparison_label.add_theme_color_override("font_color", Color(0.28, 0.30, 0.24))
+		return
+	if str(selected_field.side) == side:
+		selected_field = {"side": side, "key": key, "value": value}
+		comparison_label.text = "اختر حقل " + key + " من الوثيقة الأخرى."
+		return
+	if str(selected_field.key) != key:
+		comparison_label.text = "اختر الحقل نفسه في الوثيقة الأخرى."
+		comparison_label.add_theme_color_override("font_color", Color(0.55, 0.24, 0.18))
+		return
+	var matches := str(selected_field.value) == value
+	compared_fields[key] = matches
+	var first_key := str(selected_field.side) + ":" + key
+	var second_key := side + ":" + key
+	if field_buttons.has(first_key):
+		field_buttons[first_key].self_modulate = Color(0.68, 1.0, 0.70) if matches else Color(1.0, 0.65, 0.58)
+	if field_buttons.has(second_key):
+		field_buttons[second_key].self_modulate = Color(0.68, 1.0, 0.70) if matches else Color(1.0, 0.65, 0.58)
+	comparison_label.text = "✓ " + key + ": متطابق" if matches else "⚠ " + key + ": اختلاف في الوثيقتين"
+	comparison_label.add_theme_color_override("font_color", Color(0.16, 0.39, 0.20) if matches else Color(0.62, 0.17, 0.12))
+	selected_field.clear()
 
 func _inspect() -> void:
 	investigated_count += 1

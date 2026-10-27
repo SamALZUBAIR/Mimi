@@ -28,7 +28,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download Godot 4.7.2
+      - name: Download Godot 4.7.2 and Web export templates
         shell: bash
         run: |
           set -euo pipefail
@@ -38,28 +38,31 @@ jobs:
           unzip -q /tmp/godot.zip -d /tmp/godot-bin
           chmod +x /tmp/godot-bin/Godot_v${GODOT_VERSION}-stable_linux.x86_64
           echo "/tmp/godot-bin" >> "$GITHUB_PATH"
-          mkdir -p "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
-          mkdir -p /tmp/godot-templates
+
+          TEMPLATE_DIR="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$TEMPLATE_DIR" /tmp/godot-templates
           unzip -q /tmp/templates.tpz -d /tmp/godot-templates
-          find /tmp/godot-templates -type f -name '*.template' -exec cp {} "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable/" \;
-          test -n "$(find "$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable" -type f -name '*.template' -print -quit)"
+          test -d /tmp/godot-templates/templates
+          cp -a /tmp/godot-templates/templates/. "$TEMPLATE_DIR/"
+          test -s "$TEMPLATE_DIR/web_release.zip"
 
       - name: Import project resources
         run: Godot_v4.7.2-stable_linux.x86_64 --headless --editor --path . --quit
 
       - name: Export Web build
+        shell: bash
         run: |
           set -euo pipefail
           mkdir -p build
           Godot_v4.7.2-stable_linux.x86_64 --headless --path . --export-release "Web" build/index.html
           test -s build/index.html
-          cp -R assets build/assets
+          test -s build/index.js
+          test -s build/index.wasm
+          if [ -d assets ]; then cp -R assets build/assets; fi
+          touch build/.nojekyll
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-
-      - name: Prepare GitHub Pages artifact
-        run: touch build/.nojekyll
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3

@@ -162,7 +162,7 @@ func _build_interface() -> void:
 	allow_button.pressed.connect(_decide.bind(true))
 	decisions.add_child(allow_button)
 	next_button = _button("الزائر التالي", Color(0.42, 0.32, 0.17))
-	next_button.pressed.connect(_next_visitor)
+	next_button.pressed.connect(_on_next_pressed)
 	next_button.visible = false
 	decisions.add_child(next_button)
 
@@ -239,8 +239,13 @@ func _end_day() -> void:
 	next_button.text = "بدء اليوم التالي"
 	next_button.visible = true
 	next_button.disabled = false
-	if not next_button.pressed.is_connected(_start_next_day):
-		next_button.pressed.connect(_start_next_day)
+
+
+func _on_next_pressed() -> void:
+	if visitor_number >= visitor_data.size():
+		_start_next_day()
+	else:
+		_next_visitor()
 
 func _start_next_day() -> void:
 	day_number += 1

@@ -1,5 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="144" height="192" viewBox="0 0 36 48" shape-rendering="crispEdges">
-<rect x="10" y="4" width="16" height="3" fill="#171d1d"/><rect x="7" y="7" width="22" height="8" fill="#262a27"/><rect x="8" y="14" width="20" height="12" fill="#b98561"/><rect x="11" y="9" width="14" height="5" fill="#262a27"/><rect x="7" y="15" width="3" height="8" fill="#262a27"/><rect x="26" y="15" width="3" height="8" fill="#262a27"/>
-<rect x="11" y="18" width="3" height="2" fill="#171c1b"/><rect x="22" y="18" width="3" height="2" fill="#171c1b"/><rect x="16" y="20" width="4" height="4" fill="#98674e"/><rect x="14" y="24" width="9" height="2" fill="#6e453c"/>
-<rect x="14" y="26" width="8" height="4" fill="#a87555"/><rect x="9" y="29" width="18" height="4" fill="#d0c5a7"/><path d="M9 29H27L33 47H3Z" fill="#354c49"/><path d="M9 29L18 36L27 29L24 47H12Z" fill="#52675d"/><path d="M16 32H20L19 44H17Z" fill="#7f4b3b"/><path d="M10 46H16V48H8ZM20 46H27V48H20Z" fill="#171c1b"/><rect x="2" y="39" width="4" height="7" fill="#b98561"/><rect x="30" y="39" width="4" height="7" fill="#b98561"/>
+<!-- shadow -->
+<rect x="6" y="45" width="25" height="2" fill="#0b1113"/><rect x="9" y="43" width="20" height="3" fill="#101719"/>
+<!-- hair and head silhouette -->
+<path d="M10 7H13V4H23V6H27V12H29V22H26V26H10V22H7V13H10Z" fill="#171e20"/>
+<rect x="10" y="10" width="16" height="13" fill="#b9815d"/><rect x="9" y="12" width="2" height="7" fill="#a16b4d"/><rect x="25" y="12" width="2" height="7" fill="#a16b4d"/>
+<!-- hair fringe -->
+<path d="M9 11V7H12V5H23V7H26V12H22V10H18V12H14V10H11V14H9Z" fill="#292a27"/>
+<!-- face shadow / eyes -->
+<rect x="12" y="15" width="3" height="2" fill="#182020"/><rect x="21" y="15" width="3" height="2" fill="#182020"/><rect x="13" y="15" width="1" height="1" fill="#e1c19a"/><rect x="22" y="15" width="1" height="1" fill="#e1c19a"/>
+<rect x="17" y="17" width="3" height="3" fill="#9b684c"/><rect x="15" y="21" width="7" height="1" fill="#74463c"/><rect x="16" y="22" width="5" height="1" fill="#d5a17c"/>
+<!-- neck -->
+<rect x="15" y="24" width="7" height="5" fill="#a87554"/><rect x="15" y="24" width="7" height="2" fill="#c28c65"/>
+<!-- shirt and coat -->
+<path d="M12 27H24L29 31L33 46H3L7 31Z" fill="#2f4947"/><path d="M12 27L18 32L24 27L22 46H14Z" fill="#52665c"/><path d="M12 27L18 32L15 37L10 29ZM24 27L18 32L21 37L26 29Z" fill="#d0c4a4"/>
+<path d="M17 32H19L20 43H16Z" fill="#794a3b"/><rect x="17" y="33" width="2" height="2" fill="#bd8b50"/>
+<!-- coat seams and buttons -->
+<path d="M7 33L10 32M26 32L29 33M9 38L11 38M25 38L27 38" stroke="#789087" stroke-width="1"/><rect x="18" y="38" width="1" height="1" fill="#d1b46e"/><rect x="18" y="41" width="1" height="1" fill="#d1b46e"/>
+<!-- arms/hands -->
+<path d="M7 31H10L8 40L6 42L4 40Z" fill="#354d49"/><rect x="4" y="40" width="3" height="4" fill="#b9815d"/><path d="M26 31H29L32 40L30 42L28 40Z" fill="#354d49"/><rect x="29" y="40" width="3" height="4" fill="#b9815d"/>
+<!-- trousers and boots -->
+<path d="M11 44H17V47H10ZM19 44H25V47H19Z" fill="#202b2d"/><rect x="9" y="46" width="8" height="2" fill="#111719"/><rect x="19" y="46" width="8" height="2" fill="#111719"/>
 </svg>

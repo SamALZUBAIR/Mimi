@@ -63,28 +63,29 @@ func _build_interface() -> void:
 	add_child(background)
 
 	var tint := ColorRect.new()
-	tint.color = Color(0.025, 0.04, 0.045, 0.42)
+	tint.color = Color(0.015, 0.025, 0.028, 0.30)
 	tint.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	tint.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(tint)
 
 	var page := VBoxContainer.new()
 	page.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	page.offset_left = 18
-	page.offset_top = 14
-	page.offset_right = -18
-	page.offset_bottom = -14
-	page.add_theme_constant_override("separation", 10)
+	page.offset_left = 24
+	page.offset_top = 18
+	page.offset_right = -24
+	page.offset_bottom = -18
+	page.layout_direction = Control.LAYOUT_DIRECTION_RTL
+	page.add_theme_constant_override("separation", 12)
 	add_child(page)
 
 	var header := PanelContainer.new()
 	header.add_theme_stylebox_override("panel", _panel_style(Color(0.055, 0.075, 0.075, 0.96), Color(0.72, 0.56, 0.29)))
-	header.custom_minimum_size.y = 48
+	header.custom_minimum_size.y = 58
 	page.add_child(header)
 	var header_row := HBoxContainer.new()
-	header_row.add_theme_constant_override("separation", 16)
+	header_row.add_theme_constant_override("separation", 18)
 	header.add_child(header_row)
-	header_label = _label("بوابة الرماد  |  سجل الحدود", 22, Color(0.93, 0.79, 0.49))
+	header_label = _label("بوابة الرماد   •   سجل الحدود", 25, Color(0.96, 0.83, 0.53))
 	header_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	header_row.add_child(header_label)
 	silver_label = _label("", 17, Color(0.95, 0.88, 0.68))
@@ -96,7 +97,7 @@ func _build_interface() -> void:
 	page.add_child(main_row)
 
 	var visitor_panel := PanelContainer.new()
-	visitor_panel.custom_minimum_size = Vector2(200, 0)
+	visitor_panel.custom_minimum_size = Vector2(220, 0)
 	visitor_panel.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	visitor_panel.add_theme_stylebox_override("panel", _panel_style(Color(0.06, 0.08, 0.08, 0.93), Color(0.36, 0.43, 0.39)))
 	main_row.add_child(visitor_panel)
@@ -104,12 +105,12 @@ func _build_interface() -> void:
 	visitor_box.alignment = BoxContainer.ALIGNMENT_CENTER
 	visitor_box.add_theme_constant_override("separation", 8)
 	visitor_panel.add_child(visitor_box)
-	var visitor_title := _label("الزائر الحالي", 18, Color(0.86, 0.77, 0.56))
+	var visitor_title := _label("ملف العابر", 19, Color(0.92, 0.80, 0.53))
 	visitor_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	visitor_box.add_child(visitor_title)
 	portrait = TextureRect.new()
 	portrait.texture = load(VISITOR_PATH)
-	portrait.custom_minimum_size = Vector2(144, 192)
+	portrait.custom_minimum_size = Vector2(158, 194)
 	portrait.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	portrait.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	portrait.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
@@ -128,7 +129,8 @@ func _build_interface() -> void:
 	document_panel.add_theme_stylebox_override("panel", _panel_style(Color(0.78, 0.73, 0.59, 0.98), Color(0.22, 0.25, 0.21)))
 	main_row.add_child(document_panel)
 	var docs_row := HBoxContainer.new()
-	docs_row.add_theme_constant_override("separation", 8)
+	docs_row.layout_direction = Control.LAYOUT_DIRECTION_RTL
+	docs_row.add_theme_constant_override("separation", 12)
 	document_panel.add_child(docs_row)
 
 	var passport_card := PanelContainer.new()
@@ -181,15 +183,15 @@ func _build_interface() -> void:
 	permit_box.add_child(warning)
 
 	var footer := PanelContainer.new()
-	footer.add_theme_stylebox_override("panel", _panel_style(Color(0.045, 0.06, 0.06, 0.96), Color(0.39, 0.43, 0.36)))
+	footer.add_theme_stylebox_override("panel", _panel_style(Color(0.035, 0.05, 0.052, 0.98), Color(0.62, 0.51, 0.30)))
 	page.add_child(footer)
 	var footer_box := VBoxContainer.new()
-	footer_box.add_theme_constant_override("separation", 8)
+	footer_box.add_theme_constant_override("separation", 10)
 	footer.add_child(footer_box)
-	status_label = _label("", 15, Color(0.88, 0.84, 0.7))
+	status_label = _label("", 16, Color(0.91, 0.87, 0.75))
 	status_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	footer_box.add_child(status_label)
-	result_label = _label("", 15, Color(0.98, 0.79, 0.43))
+	result_label = _label("", 16, Color(1.0, 0.82, 0.46))
 	result_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	footer_box.add_child(result_label)
 	decisions = HBoxContainer.new()
@@ -258,8 +260,8 @@ func _document_field_button(field_name: String, value: String, side: String, key
 	var button := Button.new()
 	button.text = field_name + "  |  " + value
 	button.alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	button.custom_minimum_size = Vector2(0, 34)
-	button.add_theme_font_size_override("font_size", 14)
+	button.custom_minimum_size = Vector2(0, 38)
+	button.add_theme_font_size_override("font_size", 15)
 	button.add_theme_color_override("font_color", Color(0.19, 0.22, 0.18))
 	var style := StyleBoxFlat.new()
 	style.bg_color = Color(0.88, 0.84, 0.72)
@@ -382,9 +384,9 @@ func _doc_label() -> Label:
 func _button(value: String, color: Color) -> Button:
 	var button := Button.new()
 	button.text = value
-	button.custom_minimum_size = Vector2(0, 42)
+	button.custom_minimum_size = Vector2(0, 46)
 	button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	button.add_theme_font_size_override("font_size", 16)
+	button.add_theme_font_size_override("font_size", 17)
 	button.add_theme_color_override("font_color", Color(0.96, 0.92, 0.81))
 	var normal := StyleBoxFlat.new()
 	normal.bg_color = color
@@ -404,9 +406,12 @@ func _panel_style(color: Color, border: Color) -> StyleBoxFlat:
 	style.bg_color = color
 	style.border_color = border
 	style.set_border_width_all(2)
-	style.set_corner_radius_all(3)
-	style.content_margin_left = 12
-	style.content_margin_right = 12
-	style.content_margin_top = 8
-	style.content_margin_bottom = 8
+	style.set_corner_radius_all(6)
+	style.shadow_color = Color(0.0, 0.0, 0.0, 0.32)
+	style.shadow_size = 5
+	style.shadow_offset = Vector2(0, 3)
+	style.content_margin_left = 14
+	style.content_margin_right = 14
+	style.content_margin_top = 10
+	style.content_margin_bottom = 10
 	return style

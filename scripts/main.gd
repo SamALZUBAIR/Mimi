@@ -195,7 +195,8 @@ func _build_interface() -> void:
 	result_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	footer_box.add_child(result_label)
 	decisions = HBoxContainer.new()
-	decisions.add_theme_constant_override("separation", 8)
+	decisions.layout_direction = Control.LAYOUT_DIRECTION_RTL
+	decisions.add_theme_constant_override("separation", 10)
 	footer_box.add_child(decisions)
 	inspect_button = _button("فحص إضافي", Color(0.31, 0.39, 0.34))
 	inspect_button.pressed.connect(_inspect)
@@ -210,6 +211,9 @@ func _build_interface() -> void:
 	next_button.pressed.connect(_on_next_pressed)
 	next_button.visible = false
 	decisions.add_child(next_button)
+	decisions.move_child(allow_button, 0)
+	decisions.move_child(refuse_button, 1)
+	decisions.move_child(inspect_button, 2)
 
 func _show_visitor() -> void:
 	if visitor_number >= visitor_data.size():
